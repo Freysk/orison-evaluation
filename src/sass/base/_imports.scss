@@ -1,3 +1,26 @@
 // ▬▬▬▬ F O N T   I M P O R T ▬▬▬▬
 
-@import url('https://fonts.googleapis.com/css?family=Bitter:400,400i,700%7CMerriweather:300,300i,400,400i,700,700i,900,900i%7CMontserrat:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7CPathway+Gothic+One');
+@font-face {
+  font-family: 'Akkurat Regular';
+  src: url('../fonts/lineto-akkurat-pro-regular.eot');
+  src: url('../fonts/lineto-akkurat-pro-regular.eot') format('embedded-opentype'),
+  url('../fonts/lineto-akkurat-pro-regular.woff') format('woff');
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Akkurat Bold';
+  src: url('../fonts/lineto-akkurat-pro-bold.eot');
+  src: url('../fonts/lineto-akkurat-pro-bold.eot') format('embedded-opentype'),
+       url('../fonts/lineto-akkurat-pro-bold.woff') format('woff');
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Akkurat Light';
+  src: url('../fonts/lineto-akkurat-pro-light.eot');
+  src: url('../fonts/lineto-akkurat-pro-light.eot') format('embedded-opentype'),
+       url('../fonts/lineto-akkurat-pro-light.woff') format('woff');
+  font-style: normal;
+  font-weight: bold;
+}
