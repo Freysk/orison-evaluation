@@ -4,10 +4,11 @@
 @import 'base/imports';
 
 @import "helpers/mixins";
+@import "helpers/placeholders";
 @import "helpers/animations";
 
 @import "components/fonts";
-// @import "components/burger-simple";
+@import "components/burger-simple";
 
 @import "layout/global";
 @import "layout/home";

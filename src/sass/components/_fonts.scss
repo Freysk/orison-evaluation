@@ -1,26 +1,40 @@
 /* VAR */
 $font-main: 'Akkurat Regular', sans-serif;
 
-/* COLOR PALETTE to EXTEND */
-%white { color:$color-white;}
-%black { color:$color-black;}
-%gray { color:$color-gray;}
-%gray2 { color:$color-gray2;}
-%gray3 { color:$color-gray3;}
-
 /* STYLES to EXTEND */
-%bodytext{ @include myfont($font-main, 1.1rem); @extend %black;}
-%title{ @include myfont($font-main, 4rem); @extend %black, %bold, %text-center;}
+%title{ @include myfont($font-main, 4.8rem); }
+%title-03{ @include myfont($font-main, 1.6rem); @extend %uppercase; }
+%subtitle-01{ @include myfont($font-main, 4.8rem); }
+%bodytext{ @include myfont($font-main, 1.6rem); }
+%bodytext{ @include myfont($font-main, 1.6rem); }
 
 /* TAG SETTINGS */
-.homepage { @extend %bodytext;}
-.test2 {
-  &__title { @extend %title;}
+body { @extend %bodytext;}
+
+.menu {
+  background-color: $color-gray3;
+  opacity: .9;
+  &_logo-image {
+    padding: 15px;
+    width: 150px;
+  }
+  &_navbar {
+    font-size: 1.4rem;
+    font-family: '', sans-serif;
+    @extend %white;
+    @include flex($d:column, $w:nowrap, $j-c:flex-start, $a-i:center);
+  }
+  &_link {
+
+  }
 }
 
-/* MEDIA DESKTOP (1280px) */
-@media screen and (min-width:$desktop){
-  .test2 {
-    &__title {font-size: 12rem;}
+.headlines {
+  @extend %title;
+  &_title {
+    // @extend %white;
+  }
+  &_subtitle {
+
   }
 }
