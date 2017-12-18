@@ -1,0 +1,165 @@
+# Your snippets
+#
+# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
+# expand the prefix into a larger code block with templated values.
+#
+# You can create a new snippet in this file by typing 'snip' and then hitting
+# tab.
+#
+# An example CoffeeScript snippet to expand log to console.log:
+#
+
+
+
+
+# HTML Scope
+".text.html":
+
+  "exclamation":
+    "prefix" : "exclamation"
+    "body" : "&nbsp;!"
+
+  "Button go-to-top":
+    "prefix" : "gototop"
+    "body" : "a#gototop[href=#]{Top}"
+
+  "Block API Google Maps":
+    "prefix" : "gmaps"
+    "body" : "<div id='gmap'></div>"
+
+  "navbar template":
+    "prefix" : "navbar"
+    "body" : "nav.navbar>ul.navbar__links>li.navbar__link*4"
+
+  "Nav Social Network - Fb Tw Ln In":
+    "prefix" : "social"
+    "body" : "nav.social>ul.social__links>li.social__item>a.social__link.fa.fa-twitter^li.social__item>a.social__link.fa.fa-linkedin^li.social__item>a.social__link.fa.fa-facebook^li.social__item>a.social__link.fa.fa-behance^li.social__item>a.social__link.fa.fa-instagram"
+
+  "form template":
+    "prefix" : "form"
+    "body" :
+      "form.form>div.form__name-container>label.form__name-label[for=name]{Name}+input:text.form__name-input#name^div.form__email-container>label.form__email-label[for=email]{Email}+input:text.form__email-input#email^.form__tel-container>label.form__tel-label[for=tel]{Tel}+input:tel.form__tel-box#tel^.form__msg-container>label.form__msg-label[for=msg]{Message}+textarea.form__msg-box#msg"
+
+  "burger-simple template":
+    "prefix" : "burger-simple"
+    "body":
+      "button.burger.burger-simple>span.burger-simple__bar.burger-simple__bar--top.burger-simple__bar--top-cross+span.burger-simple__bar.burger-simple__bar--mid.burger-simple__bar--mid-cross+span.burger-simple__bar.burger-simple__bar--bot.burger-simple__bar--bot-cross>"
+
+  "jquery call - end of body":
+    "prefix" : "jquery"
+    "body":
+      "<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>"
+
+
+
+
+
+# CSS Scope
+".source.css":
+
+  # MARGIN 0 AUTO
+  "margin: 0 auto":
+    "prefix" : "m0a"
+    "body" : "margin: 0 auto;"
+
+  # MEDIA QUERIES
+  "media query - mobile 420px":
+    "prefix" : "mediam1"
+    "body" : "@media screen and (min-width:$mobile-420){\n\n}"
+
+  "media query - mobile 580px":
+    "prefix" : "mediam2"
+    "body" : "@media screen and (min-width:$mobile-580){\n\n}"
+
+  "media query - tablet 1024px":
+    "prefix" : "mediat"
+    "body" : "@media screen and (min-width:$tablet-1024){\n\n}"
+
+  "media query - desktop 1280px":
+    "prefix" : "mediad1"
+    "body" : "@media screen and (min-width:$desktop-1280){\n\n}"
+
+  "media query - desktop-FHD 1920px":
+    "prefix" : "mediad2"
+    "body" : "@media screen and (min-width:$desktop-1920){\n\n}"
+
+  # POSITION ABSOLUTE - CENTER
+  "position absolue - top:50% left:50%":
+    "prefix" : "posa"
+    "body" : "@include posa($top:50%, $left:50%, $x:-50%, $y:-50%);"
+
+  # FLEX TEMPLATE
+  "display flex - row nowrap center center":
+    "prefix" : "flex"
+    "body" : "@include flex($d:row, $w:nowrap, $j-c:flex-start, $a-i:stretch);"
+
+  # NAV Social
+  "Nav Social Network - Stylisation":
+    "prefix" : "social"
+    "body":".social{\n&__links{\nd:f\nfdr\nfxwn\njcc\nais\npl0\n}\n&__item{\nd:f\nfdr\nfxwn\njcc\naic\n}\n&__link{\nfz12\np10\nc\ntac\n}\n}"
+
+
+  # API Google Maps - Stylisation
+  "Stylisation CSS - API Google Maps":
+    "prefix" : "gmaps"
+    "body" : '#gmap {\nh300\nw100p\nmt50\nbgc#222\n}'
+
+  # MYFONT - Propriétés de base pour font
+  "Appel de ma mixin 'myFont'":
+    "prefix" : "myfont"
+    "body" : "@include myfont($myFont-main, 2rem);"
+
+  # BURGER SIMPLE (même prefix pour le js et html)
+  "Burger Simple":
+    "prefix" : "burger-simple"
+    "body" :
+      ".burger{\nposr\ncur\np0\nw40\nh40\nbackground-color:inherit;\n&:focus{\noln\n}\n}\n.burger-simple{\nborder: 2px solid black;\n.burger-simple__bar{\ndb\nw80p\nbg\npos:a\nh2\nl50p\ntransform:translate(-50%, -50%);\ntransition: .3s all ease-in-out;\n&--top{\nt25p\n}\n&--mid{\nt50p\n}\n&--bot{\nt75p\n}\n}\n}\n\n.burger-simple--hover{\n.burger-simple__bar{\ntransform:translate(-50%,-50%);\n&--top{\nt35p\n}\n&--bot{\nt65p\n}\n}\n}\n\n.burger-simple--active{\n.burger-simple__bar{\n&--top{\ntransform:translate(-50%,-50%)\nrotate(45deg);\nt50p\n}\n&--bot{\ntransform:translate(-50%,-50%)\nrotate(-45deg);\nt50p\n}\n&--mid{\nop0\n}\n}\n}"
+
+
+
+
+# Js Scope
+".source.js":
+
+  "Burger Simple":
+    "prefix": "burger-simple"
+    "body":
+      "$('.burger-simple').on({\nclick:function(){\n$(this).toggleClass('burger-simple--active');\n},mouseenter:function(){\n$(this).addClass('burger-simple--hover');\n},mouseleave:function(){\n$(this).removeClass('burger-simple--hover');\n}\n});"
+
+  "Smooth Scroll FX":
+    "prefix": "scrollsmooth"
+    "body":
+      "$('#navbar li a').click(function(){\nvar id = $(this).attr('href');\nvar position = $(id).offset().top;\n$('html,body').animate({\nscrollTop: position\n}, evenScroll($(id)));\nreturn false;\n});"
+
+  "Smooth Scroll FX - 2":
+    "prefix": "scrollsmooth2"
+    "body":
+      "$('#menu a').click(\nfunction(event){\nevent.preventDefault();\nvar id = $(this).attr('href');\n$('html, body').animate({\nscrollTop: $(id).offset().top\n}, evenScroll($(id)));\n}\n);"
+
+  "Function evenScroll - Pour Scrollspy & Smoothscroll":
+    "prefix": "evenScroll"
+    "body":
+      "function evenScroll(cible){\nvar height1 = $(document).scrollTop();\nvar height2 = cible.offset().top;\nif(height1 < height2){\nreturn (height2 - height1);\n} else {\nreturn (height1 - height2);\n}\n}"
+
+  "Scroll to Top":
+    "prefix": "gototop"
+    "body":
+      "$('body').on('click', $('#gototop'), function(){\n$('html, body').animate({\nscrollTop: 0\n}, evenScroll($('body')));\n});\n\n$(document).scroll(function(event){\nif(scroll > 80) {\n$('#gototop').fadeIn();\n} else {\n$('#gototop').fadeOut();\n}\n});"
+
+  "Scrollspy":
+    "prefix": "spyscroll"
+    "body":
+      "var $chap = 0;\n$(document).scroll(\nfunction(event){\nevent.preventDefault();\nvar li = 0;\nvar scroll = $(this).scrollTop();\n$('#navbar a').removeClass('selected');\n$('.chap').each(\nfunction(){\nvar offsetChap = $(this).offset().top +\n$(this).next('p').height();\nif(scroll >= li && scroll <= offsetChap) {\nli = offsetChap;\n$chap = $(this);\n}\n}\n);\n$chap.css('color', 'yellow');\nvar chapID = '#' + $chap.attr('id');\n$('#navbar a[href=' + chapID +\n']').addClass('selected');\n}\n);"
+
+
+
+
+
+
+#
+# Each scope (e.g. ".source.coffee" above) can only be declared once.
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# https://atom.io/docs/latest/using-atom-basic-customization#cson

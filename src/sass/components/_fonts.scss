@@ -1,0 +1,35 @@
+/* VAR */
+$bodytext: "Merriweather", serif;
+$title: "Pathway Gothic One", sans-serif;
+$xtra-1: "Arial", sans-serif;
+
+/* COLOR PALETTE to EXTEND */
+%black { color:$color-black;}
+%red { color:$color-red;}
+
+/* STYLES to EXTEND */
+%bodytext{ @include myfont($bodytext, 1.1rem); @extend %black;}
+%title{ @include myfont($title, 4rem); @extend %black, %bold, %text-center;}
+%subtitle-1{ @include myfont($title, 2rem); @extend %red, %text-center;}
+%subtitle-2{ @include myfont($title, 1.4rem);}
+%font-btn{ @include myfont($xtra-1, 1rem);}
+
+/* TAG SETTINGS */
+.homepage { @extend %bodytext;}
+.test2 {
+  &__title { @extend %title;}
+  &__subtitle { @extend %subtitle-1;}
+  &__body { @extend %bodytext; max-width: 1024px;}
+  &__btn { @extend %font-btn; display: block; margin: 0 auto;}
+}
+
+/* MEDIA DESKTOP (1280px) */
+@media screen and (min-width:$desktopS){
+  .test2 {
+    &__title {font-size: 12rem;}
+    &__subtitle {color: #000;}
+    &__body {font-size: 4rem;text-align: center;}
+    &__btn {font-size: 4rem;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import 'base/myreset';
+@import "helpers/variables";
+@import 'base/generic-font-properties';
+@import 'base/imports';
+
+@import "helpers/mixins";
+@import "helpers/animations";
+
+@import "components/fonts";
+// @import "components/burger-simple";
+
+@import "layout/global";
+@import "layout/home";
+// @import "layout/contact";
