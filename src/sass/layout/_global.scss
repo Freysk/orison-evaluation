@@ -8,6 +8,12 @@
   background-color: $color-gray3;
   opacity: .98;
   padding: 25px;
+  transition: all .2s ease-in-out;
+  z-index: 2;
+  @media screen and (min-width:$desktop){
+    background-color: rgba(0,0,0,0);
+    padding-bottom: 60px;
+  }
   .wrapper {
     @include flex($d:row, $w:nowrap, $j-c:space-between, $a-i:center);
     @media screen and (min-width:$desktop){
@@ -29,8 +35,11 @@
   opacity: .98;
   width: 100%;
   display: none;
-  .wrapper {
-    @include flex($d:row, $w:nowrap, $j-c:space-between, $a-i:center);
+  @media screen and (min-width:$desktop){
+    display: block;
+    position: relative;
+    background-color: transparent;
+    top: 0;
   }
   &_links {
     @include flex($d:column, $w:nowrap, $j-c:flex-start, $a-i:center);
@@ -39,7 +48,36 @@
       flex-direction: row;
       justify-content: flex-end;
       position: relative; top: 0;
-      display: block;
+      margin: 0;
+    }
+  }
+  &_link {
+      @media screen and (min-width:$desktop){
+      &:hover {
+        text-decoration: none;
+        color: $color-gray;
+      }
+      &--booking {
+        display: inline-block;
+        width: 150px;
+        padding: 7px;
+        text-transform: uppercase;
+        font-family: $font-main-bold;
+        font-size: 11px;
+        letter-spacing: 2px;
+        color: $color-white;
+        border: 1px solid #fff;
+        border-radius: 20px;
+        text-align: center;
+        transition: all .3s ease-in-out;
+        position: absolute;
+        right: 10px;
+        top: 45px;
+        &:hover {
+          background-color: transparent;
+          border-color: $color-gray;
+        }
+      }
     }
   }
   &_element {
@@ -51,6 +89,7 @@
   background-color: $color-gray4;
   @extend %white;
   padding: 50px;
+  padding-top: 70px;
   .wrapper {
     @include flex($d:column, $w:nowrap, $j-c:flex-start, $a-i:center);
     @media screen and (min-width:$desktop){

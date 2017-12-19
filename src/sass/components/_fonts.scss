@@ -8,7 +8,7 @@ body { @extend %fontmain;}
   }
   &_element {
     font-size: 1.4rem;
-    @extend %fontmain, %white;
+    @extend %fontmain-bold, %white;
   }
 }
 .headlines {
@@ -39,6 +39,9 @@ body { @extend %fontmain;}
   &_bodytext {
     @extend %fontmain-light, %white, %text-center;
     font-size: 2rem;
+    @media screen and (min-width:$desktop){
+      font-size: 2.8rem;
+    }
   }
 }
 .product {
@@ -67,12 +70,24 @@ body { @extend %fontmain;}
   @extend %text-center;
   &_title {
     @extend %title-style1;
+    @media screen and (min-width:$desktop){
+      margin-bottom: 30px;
+    }
   }
   &_subtitle {
     @extend %fontmain-light, %black;
     font-size: 2rem;
     line-height: 3rem;
     margin-bottom: 30px;
+    @media screen and (min-width:$desktop){
+      font-size: 2.6em;
+      margin-bottom: 70px;
+    }
+  }
+  &_reasons {
+    @media screen and (min-width:$desktop){
+      @include flex($d:row, $w:wrap, $j-c:space-around, $a-i:stretch);
+    }
   }
   &-reason {
     &_title {
@@ -87,6 +102,9 @@ body { @extend %fontmain;}
       color: $color-gray5;
       margin-bottom: 40px;
     }
+    @media screen and (min-width:$desktop){
+      width: 30%;
+    }
   }
 }
 .articles {
@@ -94,6 +112,9 @@ body { @extend %fontmain;}
     &_title {
       @extend %title-style2, %white;
       margin-bottom: 10px;
+      @media screen and (min-width:$desktop){
+        font-size: 4rem;
+      }
     }
     &_summary {
       @extend %fontmain-light;
@@ -108,7 +129,12 @@ body { @extend %fontmain;}
   }
 }
 .cta {
-  &_title { @extend %title-style2, %white;}
+  &_title {
+    @extend %title-style2, %white;
+    @media screen and (min-width:$desktop){
+      font-size: 4rem;
+    }
+  }
   &_bodytext {
     @extend %fontmain;
     font-size: 2rem;

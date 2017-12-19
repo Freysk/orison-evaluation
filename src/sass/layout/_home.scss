@@ -2,22 +2,50 @@
   background: url('../img/Orison-Hero-5.jpg') center;
   background-size: cover;
   height: 460px;
-  @include flex($d:column, $w:nowrap, $j-c:center, $a-i:stretch);
+  @media screen and (min-width:$desktop){
+    height: 720px;
+  }
+  &>.wrapper {
+    @include flex($d:row, $w:nowrap, $j-c:flex-start, $a-i:center);
+    height: 100%;
+  }
 }
 .headlines {
+  margin-top: auto;
+  margin-bottom: auto;
   width: 350px;
-  margin-left: 20px;
+  margin-left: 30px;
 }
 .our-process {
+  position: relative;
   @include flex($d:column, $w:nowrap, $j-c:flex-start, $a-i:center);
   background-color: $color-gray4;
   padding: 60px 0;
   &_bodytext {
     margin: 15px 20px 80px;
+    transition: all .5s ease-in-out;
+    @media screen and (min-width:$desktop){
+      width: 620px;
+    }
+    width: 620px;
+
   }
   &_video {
     @extend .wrapper;
     width: 95%;
+    z-index: 1;
+  }
+  &_box {
+    position: absolute;
+    display: none;
+    @media screen and (min-width:$desktop){
+      background-color: $color-gray3;
+      z-index: 0;
+      display: block;
+      height: 350px;
+      width: 100%;
+      bottom: 0;
+    }
   }
 }
 .featured-products {
@@ -29,6 +57,9 @@
 }
 .product {
   @include flex($d:column, $w:nowrap, $j-c:flex-start, $a-i:center);
+  @media screen and (min-width:$desktop){
+    flex-direction: row;
+  }
   &_picture {
     &[alt="The free-standing towers"] {
       order:1;
@@ -39,6 +70,15 @@
       order:1;
       width: 100%;
     }
+    @media screen and (min-width:$desktop){
+      &[alt="The free-standing towers"] {
+        width: 220px;
+      }
+      &[alt="The Orison Panel"] {
+        width: 50%;
+        margin-left: -50px;
+      }
+    }
   }
   &-description {
     &--first {
@@ -46,6 +86,15 @@
     }
     &--second {
       order: 2;
+      @media screen and (min-width:$desktop){
+        padding-left: 50px;
+      }
+    }
+    @media screen and (min-width:$desktop){
+      width: 50%;
+      &_description {
+        width: 70%;
+      }
     }
   }
 }
@@ -96,6 +145,13 @@
     &_btn-more {
       padding: 10px;
     }
+    @media screen and (min-width:$desktop){
+      width: 50%;
+      height: calc(50vw / 15 * 10);
+      @include flex($d:column, $w:nowrap, $j-c:center, $a-i:stretch);
+      align-content: center;
+      padding: 100px;
+    }
   }
   &_illustration {
     margin: 0;
@@ -103,6 +159,16 @@
     &--second { order: 0; }
     &-image {
       width: 100%;
+    }
+  }
+  @media screen and (min-width:$desktop){
+    @include flex($d:row, $w:wrap, $j-c:flex-start, $a-i:stretch);
+    &_illustration {
+      display: block;
+      width: 50%;
+      &-image {
+        height: 100%;
+      }
     }
   }
 }
@@ -119,14 +185,24 @@
 .compliments {
   background-color: $color-gray2;
   padding: 50px 20px;
+  @media screen and (min-width:$desktop){
+    padding: 100px 20px;
+  }
   &_container {
     @include flex($d:column, $w:nowrap, $j-c:flex-start, $a-i:center);
+    @media screen and (min-width:$desktop){
+      flex-direction: row;
+      justify-content: space-around;
+    }
   }
   .compliment {
     @include flex($d:column, $w:nowrap, $j-c:flex-start, $a-i:center);
     &_media-logo {
       width: 180px;
       margin-bottom: 40px;
+    }
+    @media screen and (min-width:$desktop){
+      width: 30%;
     }
   }
   .other-medias_logo {
