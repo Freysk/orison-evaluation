@@ -21,29 +21,32 @@
   <header class="header-hero">
     <div class="wrapper">
       <!-- NAVIGATION -->
-      <button class="burger burger-simple">
-        <span class="burger-simple__bar burger-simple__bar--top burger-simple__bar--top-cross"></span>
-        <span class="burger-simple__bar burger-simple__bar--mid burger-simple__bar--mid-cross"></span>
-        <span class="burger-simple__bar burger-simple__bar--bot burger-simple__bar--bot-cross"></span>
-      </button>
-      <nav class="menu">
-        <a href="index.html" class="menu_logo"><img src="img/logo.svg" alt="Logo Orison" class="menu_logo-image"></a>
-        <ul class="menu_navbar">
-          <li class="menu_element"><a href="products.html" class="menu_link">Products</a></li>
-          <li class="menu_element"><a href="#" class="menu_link">About</a></li>
-          <li class="menu_element"><a href="blog.html" class="menu_link">Blog</a></li>
-          <li class="menu_element"><a href="contact.html" class="menu_link">Contact</a></li>
-          <li class="menu_element"><a href="#" class="menu_link">Media</a></li>
-          <li class="menu_element"><a href="#" class="menu_link-booking">Reserve Now</a></li>
-        </ul>
-      </nav>
+      <div class="menu">
+        <div class="wrapper">
+          <a href="index.html" class="menu_logo"><img src="img/logo.svg" alt="Logo Orison" class="menu_logo-image"></a>
+          <button class="burger burger-simple">
+            <span class="burger-simple__bar burger-simple__bar--top burger-simple__bar--top-cross"></span>
+            <span class="burger-simple__bar burger-simple__bar--mid burger-simple__bar--mid-cross"></span>
+            <span class="burger-simple__bar burger-simple__bar--bot burger-simple__bar--bot-cross"></span>
+          </button>
+        </div>
+        <nav class="navbar">
+          <ul class="navbar_links">
+            <li class="navbar_element"><a href="products.html" class="navbar_link">Shop</a></li>
+            <li class="navbar_element"><a href="#" class="navbar_link">About</a></li>
+            <li class="navbar_element"><a href="blog.html" class="navbar_link">Blog</a></li>
+            <li class="navbar_element"><a href="contact.html" class="navbar_link">Contact</a></li>
+            <li class="navbar_element"><a href="#" class="navbar_link">News</a></li>
+            <li class="navbar_element"><a href="#" class="navbar_link navbar_link--booking">Reserve Now</a></li>
+          </ul>
+        </nav>
+      </div>
       <!-- HEADLINES -->
       <div class="headlines">
-        <h1 class="headlines_title">Meet Orison<br>
-          <span class="headlines_subtitle">The first all-in-one, self-installable home battery system</span>
-        </h1>
-        <a href="#" class="headlines_btn-getitnow">Get it now</a>
-        <a href="#" class="headlines_btn-moreinfos">More info</a>
+        <h1 class="headlines_title">Meet Orison</h1>
+        <h2 class="headlines_subtitle">The first all-in-one, self-installable home battery system</h2>
+        <a href="#" class="headlines_btn headlines_btn--getitnow">Get it now</a>
+        <a href="#" class="headlines_btn headlines_btn--moreinfos">More info</a>
       </div>
     </div>
   </header>
@@ -57,31 +60,33 @@
       <p class="our-process_bodytext">
         Store energy and intelligently power your home or business with the first ever plug-and-play solution. Whether you get your energy from the grid or solar, you can now control when to store it and when to use it.
       </p>
-      <video src="medias/ORI-House-Revision_v09-1.mp4" class="our-process_video"></video>
+      <video src="medias/ORI-House-Revision_v09-1.mp4" class="our-process_video" autoplay controls></video>
     </section>
 
     <!-- 2ND SECTION - FEATURED PRODUCTS-->
     <section class="featured-products">
-      <div class="product">
-        <img src="img/product-two-towers.png" alt="The free-standing towers" class="product-picture">
-        <div class="product-description">
-          <h2 class="product-description_title">Free standing</h2>
-          <h3 class="product-description_name-product">Orison Tower</h3>
-          <p class="product-description_description">
-            Our free-standing floor Tower adds customizable LED light to your indoor environment and includes a bluetooth speaker for stunning sound.
-          </p>
-          <a href="#" class="product-description_btn-more">Learn more</a>
+      <div class="wrapper">
+        <div class="product">
+          <img src="img/product-two-towers.png" alt="The free-standing towers" class="product_picture">
+          <div class="product-description product-description--first">
+            <h2 class="product-description_title">Free standing</h2>
+            <h3 class="product-description_name-product">Orison Tower</h3>
+            <p class="product-description_description">
+              Our free-standing floor Tower adds customizable LED light to your indoor environment and includes a bluetooth speaker for stunning sound.
+            </p>
+            <a href="#" class="product-description_btn-more">Learn more</a>
+          </div>
         </div>
-      </div>
-      <div class="product">
-        <img src="img/product-panel.png" alt="The Orison Panel" class="product-picture">
-        <div class="product-description">
-          <h2 class="product-description_title">Wall mounted</h2>
-          <h3 class="product-description_name-product">Orison Panel</h3>
-          <p class="product-description_description">
-            Our Panel system with colorful LED lights is designed to be mounted on any indoor wall.  With tailored skins it can be displayed as art or concealed behind furniture and appliances.
-          </p>
-          <a href="#" class="product-description_btn-more">Learn more</a>
+        <div class="product">
+          <img src="img/product-panel.png" alt="The Orison Panel" class="product_picture">
+          <div class="product-description product-description--second">
+            <h2 class="product-description_title">Wall mounted</h2>
+            <h3 class="product-description_name-product">Orison Panel</h3>
+            <p class="product-description_description">
+              Our Panel system with colorful LED lights is designed to be mounted on any indoor wall.  With tailored skins it can be displayed as art or concealed behind furniture and appliances.
+            </p>
+            <a href="#" class="product-description_btn-more">Learn more</a>
+          </div>
         </div>
       </div>
     </section>
@@ -134,27 +139,28 @@
 
     <!-- 4TH SECTION - ARTICLES -->
     <section class="articles">
-      <div class="article">
+      <div class="article article--first">
         <h4 class="article_title">Highly intelligent, network operated.</h4>
         <p class="article_summary">
           Orison’s integrated Cloud network uses data including utility rates, peak demand charges, weather, blackout alerts, your usage profile, and more to determine the optimal operating schedule for your device. The Orison Cloud also works collectively to make the energy grid more efficient.
         </p>
         <a href="#" class="article_btn-more">Read up</a>
       </div>
-      <figure class="illustration"><img src="img/Orison-Panel-Series.jpg" alt="" class="article_image"></figure>
-      <div class="article">
+      <figure class="articles_illustration articles_illustration--first"><img src="img/Orison-Panel-Series.jpg" alt="" class="articles_illustration-image"></figure>
+      <div class="article article--second">
         <h4 class="article_title">No permits, wiring or construction.</h4>
         <p class="article_summary">
           Orison is designed to be effortless to install and operate. Weighing less than 40 lbs., Orison can be mailed directly to your door. Simply plug it in like you would any other appliance, set-up with your Orison App, and you’re done.
         </p>
+        <a href="#" class="article_btn-more">Read up</a>
       </div>
-      <figure class="illustration"><img src="img/Orison-Tower-Cord.jpg" alt="" class="article_image"></figure>
+      <figure class="articles_illustration articles_illustration--second"><img src="img/Orison-Tower-Cord.jpg" alt="" class="articles_illustration-image"></figure>
     </section>
 
     <!-- 5TH SECTION - CALL-TO-ACTION | BOOK NOW -->
     <section class="cta">
       <figure class="cta_illustration">
-        <img src="img/Screen-Shot-2016-12-13-at-1.56.37-PM.png" alt="" class="book-now_image">
+        <img src="img/panelandtower.png" alt="" class="cta_illustration-image">
       </figure>
       <h4 class="cta_title">Power your home and the future</h4>
       <p class="cta_bodytext">Reserve Orison and get it first.</p>
@@ -187,12 +193,12 @@
     <div class="wrapper">
       <!-- siteplan -->
       <nav class="footer_siteplan">
-        <div class="footer_siteplan-part1">
+        <div class="footer_siteplan-links">
           <a href="products.html" class="footer_siteplan-link">Products</a>
           <a href="#" class="footer_siteplan-link">About</a>
           <a href="blog.html" class="footer_siteplan-link">Blog</a>
         </div>
-        <div class="footer_siteplan-part2">
+        <div class="footer_siteplan-links">
           <a href="contact.html" class="footer_siteplan-link">Contact</a>
           <a href="#" class="footer_siteplan-link">Faqs</a>
           <a href="#" class="footer_siteplan-link">Media</a>
@@ -209,12 +215,12 @@
       </nav>
       <!-- form -->
       <form class="footer_form">
-        <label for="email" class="footer_label-email"></label>
-        <input type="email" name="email" id="email" class="footer_input-email">
+        <label for="email" class="footer_label-email">Sign up for updates</label>
+        <input type="email" name="email" id="email" class="footer_input-email" placeholder="Email">
         <button type="submit" class="footer_btn-submit">Submit</button>
       </form>
       <!-- copyrights -->
-      <small class="footer_copyrights">&copy;2016 Orison. All rights reserved.</small>
+      <small class="footer_copyrights">&copy;2016 Orison. <br>All rights reserved.</small>
     </div>
   </footer>
 

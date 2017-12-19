@@ -5,6 +5,69 @@
 %gray2 { color:$color-gray2;}
 %gray3 { color:$color-gray3;}
 
-%button {
+%btn1{
+  display: inline-block;
+  width: 150px;
+  padding: 7px;
+  text-transform: uppercase;
+  font-family: $font-main-bold;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: $color-white;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  text-align: center;
+  &:hover {
+    background-color: #fff;
+    color: $color-black;
+    transition: all .3s ease-in-out;
+    text-decoration: none;
+  }
+}
 
+%btn2 {
+  display: inline-block;
+  width: 150px;
+  padding: 7px;
+  text-transform: uppercase;
+  font-family: $font-main-bold;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: $color-white;
+  border: 1px solid $color-gray2;
+  border-radius: 20px;
+  text-align: center;
+  background-color: $color-gray2;
+  &:hover {
+    border: 1px solid $color-white;
+    background-color: $color-white;
+    color: $color-black;
+    transition: all .3s ease-in-out;
+    text-decoration: none;
+  }
+}
+%fontmain { font-family: $font-main; }
+%fontmain-light {
+  font-family:$font-main-light; }
+%fontmain-bold {
+  font-family:$font-main-bold; }
+%title-style1 {
+  font-family:$font-main-bold;
+  color: $color-gray2;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 1.6rem;
+}
+%title-style2 {
+  font-family: $font-main-light;
+  font-size: 2.4rem;
+}
+
+%icon-before-center {
+  content:'';
+  display: block;
+  margin: 0 auto;
+  width: 85px; height: 85px;
+  border-radius: 50%;
+  padding: 20px;
 }

@@ -1,7 +1,149 @@
 .wrapper {
   max-width: 1140px;
+  margin: 0 auto;
+}
+.menu {
+  position: fixed; top: 0; left: 0;
+  width: 100%;
+  background-color: $color-gray3;
+  opacity: .98;
+  padding: 25px;
+  .wrapper {
+    @include flex($d:row, $w:nowrap, $j-c:space-between, $a-i:center);
+    @media screen and (min-width:$desktop){
+
+    }
+  }
+  &_logo-image {
+    width: 120px;
+  }
+  .burger {
+    @media screen and (min-width:$desktop){
+      display: none;
+    }
+  }
+}
+.navbar {
+  position: fixed; top: 69px; left: 0;
+  background-color: $color-gray3;
+  opacity: .98;
+  width: 100%;
+  display: none;
+  .wrapper {
+    @include flex($d:row, $w:nowrap, $j-c:space-between, $a-i:center);
+  }
+  &_links {
+    @include flex($d:column, $w:nowrap, $j-c:flex-start, $a-i:center);
+    padding-left: 0;
+    @media screen and (min-width:$desktop){
+      flex-direction: row;
+      justify-content: flex-end;
+      position: relative; top: 0;
+      display: block;
+    }
+  }
+  &_element {
+    padding: 10px;
+  }
 }
 
-.header-hero {
+.footer {
+  background-color: $color-gray4;
+  @extend %white;
+  padding: 50px;
+  .wrapper {
+    @include flex($d:column, $w:nowrap, $j-c:flex-start, $a-i:center);
+    @media screen and (min-width:$desktop){
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+  &_siteplan {
+    @include flex($d:row, $w:nowrap, $j-c:space-around, $a-i:stretch);
+    width: 100%;
+    margin-bottom: 30px;
+    @media screen and (min-width:$desktop){
+      flex-basis: 25%;
+    }
+    &-links {
+      @include flex($d:column, $w:nowrap, $j-c:flex-start, $a-i:center);
+      @media screen and (min-width:$desktop){
+        align-items: flex-start;
+      }
+    }
+    &-link {
+      @extend %uppercase;
+      font-size: 1.1rem;
+      letter-spacing: 0.2rem;
+      margin-bottom: 5px;
+    }
+  }
+  .social{
+    margin-bottom: 30px;
+    &__links{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: stretch;
+      padding-left: 0;
+    }
+    &__item{
+      @include flex($d:row, $w:nowrap, $j-c:center, $a-i:center);
+      padding: 10px;
+    }
+    &__link{
+      @extend %white;
+      border: 1px solid $color-white;
+      border-radius: 50%;
+      display: block;
+      padding: 5px;
+      font-size: 16px;
+      text-align: center;
+      &.fa-facebook {
+        width: 28px;
+      }
+      &.fa-instagram {
+        width: 28px;
+      }
+    }
+  }
+  &_form {
+    @include flex($d:column, $w:nowrap, $j-c:flex-start, $a-i:center);
+    width: 100%;
+    @media screen and (min-width:$desktop){
+      align-items: flex-start;
+      flex-basis:20%;
+    }
+  }
+  &_label-email {
+    color: $color-white;
+    @extend %fontmain-bold,%uppercase;
+    letter-spacing: .1rem;
+    font-size: .8rem;
+    margin-bottom: 0;
+  }
+  &_input-email {
+    width: 100%; height: 30px;
+    background-color: $color-gray4;
+    border: 1px solid $color-gray;
+    margin-bottom: 5px;
+    &::placeholder {
+      padding-left: 10px;
+    }
+  }
+  &_btn-submit {
+    @extend %btn2;
+    margin-bottom: 20px;
+  }
+  &_copyrights {
+    @extend %text-center;
+    color: $color-gray;
+    font-size: 1.4rem;
+    @media screen and (min-width:$desktop){
+      text-align: right;
+    }
+  }
 
 }

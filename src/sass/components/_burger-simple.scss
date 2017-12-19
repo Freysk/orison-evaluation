@@ -1,11 +1,10 @@
 .burger{
-  position: absolute;
-  top: 30px; right: 25px;
+  position: relative;
   cursor: pointer;
   padding: 0;
   width: 16px;
   height: 10px;
-  background-color:inherit;
+  background-color:transparent;
   &:focus{
     outline: none;
   }

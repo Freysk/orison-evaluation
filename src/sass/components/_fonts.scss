@@ -1,40 +1,131 @@
-/* VAR */
-$font-main: 'Akkurat Regular', sans-serif;
-
-/* STYLES to EXTEND */
-%title{ @include myfont($font-main, 4.8rem); }
-%title-03{ @include myfont($font-main, 1.6rem); @extend %uppercase; }
-%subtitle-01{ @include myfont($font-main, 4.8rem); }
-%bodytext{ @include myfont($font-main, 1.6rem); }
-%bodytext{ @include myfont($font-main, 1.6rem); }
-
 /* TAG SETTINGS */
-body { @extend %bodytext;}
+body { @extend %fontmain;}
 
-.menu {
-  background-color: $color-gray3;
-  opacity: .9;
-  &_logo-image {
-    padding: 15px;
-    width: 150px;
-  }
-  &_navbar {
-    font-size: 1.4rem;
-    font-family: '', sans-serif;
-    @extend %white;
+.navbar {
+  &_links {
     @include flex($d:column, $w:nowrap, $j-c:flex-start, $a-i:center);
+    padding-left: 0;
   }
-  &_link {
-
+  &_element {
+    font-size: 1.4rem;
+    @extend %fontmain, %white;
   }
 }
-
 .headlines {
-  @extend %title;
+  @extend %fontmain-light;
   &_title {
-    // @extend %white;
+    @extend %white;
+    font-size: 4.8rem;
+    line-height: 5.2rem;
   }
   &_subtitle {
-
+    font-size: 3.6rem;
+    line-height: 3.8rem;
+    color: $color-gray;
+  }
+  &_btn {
+    margin-top: 40px;
+    @extend %btn1;
+    &:first-of-type {
+      @extend %btn2;
+      margin-right: 5px;
+    }
+  }
+}
+.our-process {
+  &_title {
+    @extend %title-style1, %text-center;
+  }
+  &_bodytext {
+    @extend %fontmain-light, %white, %text-center;
+    font-size: 2rem;
+  }
+}
+.product {
+  &-description {
+    @extend %white;
+    &_title {
+      @extend %title-style1;
+      margin-bottom: 20px;
+    }
+    &_name-product {
+      @extend %title-style2;
+      margin-bottom: 10px;
+    }
+    &_description {
+      color: $color-gray;
+      font-size: 1.6rem;
+      margin-bottom: 40px;
+    }
+    &_btn-more {
+      @extend %btn2;
+      margin-bottom: 30px;
+    }
+  }
+}
+.whyUs {
+  @extend %text-center;
+  &_title {
+    @extend %title-style1;
+  }
+  &_subtitle {
+    @extend %fontmain-light, %black;
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-bottom: 30px;
+  }
+  &-reason {
+    &_title {
+      @extend %fontmain-bold, %uppercase;
+      font-size: 1.4rem;
+      margin: 20px 0 10px;
+      letter-spacing: 2px;
+    }
+    &_explanations {
+      @extend %fontmain-light;
+      font-size: 1.6rem;
+      color: $color-gray5;
+      margin-bottom: 40px;
+    }
+  }
+}
+.articles {
+  .article {
+    &_title {
+      @extend %title-style2, %white;
+      margin-bottom: 10px;
+    }
+    &_summary {
+      @extend %fontmain-light;
+      font-size: 1.6rem;
+      color: $color-gray;
+      margin-bottom: 30px;
+    }
+    &_btn-more {
+      @extend %btn1;
+      margin-bottom: 10px;
+    }
+  }
+}
+.cta {
+  &_title { @extend %title-style2, %white;}
+  &_bodytext {
+    @extend %fontmain;
+    font-size: 2rem;
+    margin-bottom: 3.5rem;
+    color: $color-gray;
+  }
+  &_btn {
+    @extend %btn1;
+    margin-bottom: 20px;
+  }
+}
+.compliments {
+  .compliment {
+    &_text {
+      @extend %fontmain-light, %text-center, %black;
+      font-size: 1.6rem;
+      margin-bottom: 50px;
+    }
   }
 }
