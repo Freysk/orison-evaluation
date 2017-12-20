@@ -18,7 +18,7 @@
 
 <body class="blog-page">
 
-  <header class="header">
+  <header class="header-hero">
     <div class="wrapper">
       <!-- NAVIGATION -->
       <div class="menu">
@@ -55,7 +55,7 @@
     <section class="blog">
       <div class="wrapper">
         <div class="blog-articles">
-          <div class="blog-article">
+          <div class="blog-article reveal">
             <figure class="blog-article_cover"><a href="article-template.html" class="blog-article_link"><img src="img/blog-cvr-9-26-500x300.jpg" alt="Cover Article" class="blog-article_cover-image"></a></figure>
             <a href="article-template.html" class="blog-article_title-link"><h2 class="blog-article_title">
               Orison Selected as a Finalist for CONNECT’s 30th Annual Most Innovative New Product Awards
@@ -66,25 +66,27 @@
             </p>
             <a href="article-template.html" class="blog-article_btn-more">Read more</a>
           </div>
-          <div class="blog-article">
-            <figure class="blog-article_cover"><a href="article-template.html" class="blog-article_link"><img src="img/blog-post-4-12-500x300.jpg" alt="Cover Article" class="blog-article_cover-image"></a></figure>
-            <a href="article-template.html" class="blog-article_title-link"><h2 class="blog-article_title"></a>
-              Preparing for Utility Rate Changes: How Orison Can Help You
-            </h2>
-            <small class="blog-article_publishing-date">April 13, 2017 by Emily Jiles</small>
+          <div class="blog-article reveal">
+            <figure class="blog-article_cover"><a href="article-template.html" class="blog-article_link"><img src="img/blog-cvr-9-26-500x300.jpg" alt="Cover Article" class="blog-article_cover-image"></a></figure>
+            <a href="article-template.html" class="blog-article_title-link"><h2 class="blog-article_title">
+              Orison Selected as a Finalist for CONNECT’s 30th Annual Most Innovative New Product Awards
+            </h2></a>
+            <small class="blog-article_publishing-date">November 15, 2017 by Melanie Venter</small>
             <p class="blog-article_text">
-              If you’re anything like me, you usually think of what your electricity usage is costing you about once a month—when you get your bill in the mail. After opening your bill, you immediately go on a campaign to reduce your overall usage…starting by telling everyone in the house to turn off the lights! In some […]
+              Orison has been selected as a finalist in CONNECT’s Most Innovative New Product Awards in its Cleantech, Sustainability, and Energy category . CONNECT, a premier innovation company accelerator in San Diego that creates and scales great companies in the technology and life sciences sectors, continues its thirty-year tradition of celebrating innovation leaders in the local San […]
             </p>
             <a href="article-template.html" class="blog-article_btn-more">Read more</a>
           </div>
-          <div class="blog-article">
-            <figure class="blog-article_cover"><a href="article-template.html" class="blog-article_link"><img src="img/blog-3-24-500x300.jpg" alt="Cover Article" class="blog-article_cover-image"></a></figure>
-            <a href="article-template.html" class="blog-article_title-link"><h2 class="blog-article_title"></h2></a>
-            <small class="blog-article_publishing-date">March 24, 2017 by Emily Jiles</small>
+          <div class="blog-article reveal">
+            <figure class="blog-article_cover"><a href="article-template.html" class="blog-article_link"><img src="img/blog-cvr-9-26-500x300.jpg" alt="Cover Article" class="blog-article_cover-image"></a></figure>
+            <a href="article-template.html" class="blog-article_title-link"><h2 class="blog-article_title">
+              Orison Selected as a Finalist for CONNECT’s 30th Annual Most Innovative New Product Awards
+            </h2></a>
+            <small class="blog-article_publishing-date">November 15, 2017 by Melanie Venter</small>
             <p class="blog-article_text">
-              ENERGY STORAGE  Energy Manager: Chicago Suburb Selected for Community Energy Storage Pilot In the Chicago suburb of Beecher, Illinois, Commonwealth Edison has launched a Community Energy Storage (CES) pilot to investigate the value of battery technology to reduce the impact of power outages in residential areas where customers experience service interruptions, particularly during extreme weather […]
+              Orison has been selected as a finalist in CONNECT’s Most Innovative New Product Awards in its Cleantech, Sustainability, and Energy category . CONNECT, a premier innovation company accelerator in San Diego that creates and scales great companies in the technology and life sciences sectors, continues its thirty-year tradition of celebrating innovation leaders in the local San […]
             </p>
-            <a href="" class="blog-article_btn-more">Read more</a>
+            <a href="article-template.html" class="blog-article_btn-more">Read more</a>
           </div>
         </div>
         <div class="blog-options">
@@ -129,12 +131,12 @@
     <div class="wrapper">
       <!-- siteplan -->
       <nav class="footer_siteplan">
-        <div class="footer_siteplan-part1">
+        <div class="footer_siteplan-links">
           <a href="products.html" class="footer_siteplan-link">Products</a>
           <a href="#" class="footer_siteplan-link">About</a>
           <a href="blog.html" class="footer_siteplan-link">Blog</a>
         </div>
-        <div class="footer_siteplan-part2">
+        <div class="footer_siteplan-links">
           <a href="contact.html" class="footer_siteplan-link">Contact</a>
           <a href="#" class="footer_siteplan-link">Faqs</a>
           <a href="#" class="footer_siteplan-link">Media</a>
@@ -151,12 +153,12 @@
       </nav>
       <!-- form -->
       <form class="footer_form">
-        <label for="email" class="footer_label-email"></label>
-        <input type="email" name="email" id="email" class="footer_input-email">
+        <label for="email" class="footer_label-email">Sign up for updates</label>
+        <input type="email" name="email" id="email" class="footer_input-email" placeholder="Email">
         <button type="submit" class="footer_btn-submit">Submit</button>
       </form>
       <!-- copyrights -->
-      <small class="footer_copyrights">&copy;2016 Orison. All rights reserved.</small>
+      <small class="footer_copyrights">&copy;2016 Orison. <br>All rights reserved.</small>
     </div>
   </footer>
 
@@ -167,10 +169,8 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBikZdvRXs73FS--d-BZlrXQqAod5FRXHc&callback=initMap"></script> -->
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD13I3jJniuhU0QJ8alaBiyWw9lS1xkxcQ&callback=initMap"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
   <script src="js/main.min.js"></script>
-  <script src="js/api-gmaps.min.js"></script>
+  <script src="js/scrollreveal.min.js"></script>
 </body>
 </html>

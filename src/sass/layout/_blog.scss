@@ -1,0 +1,148 @@
+.blog-page  {
+  .header-hero {
+    position: relative;
+    background-image: url('../img/blog-cvr-9-26.jpg');
+    background-repeat: no-repeat;
+    background-position: center 0px;
+    background-size: 150%;
+    background-attachment: fixed;
+    &::after {
+      content:'';
+      @include posa($top:50%, $left:50%, $x:-50%, $y:-50%);
+      display: block;
+      background-color: rgba(0,0,0,.4);
+      width: 100%; height: 100%;
+    }
+  }
+  .featured-blog-article {
+    z-index: 1;
+    @extend %fontmain-light, %text-center, %white;
+    &_title {
+      @extend %fontmain-light;
+      font-size: 2.4rem;
+      line-height: 2.4rem;
+      margin-bottom: 10px;
+    }
+    &_publishing-date {
+      @extend %fontmain;
+      font-size: 1.6rem;
+      display: block;
+      margin-bottom: 30px;
+    }
+    &_btn-read {
+      @extend %btn2;
+    }
+  }
+
+  .blog {
+    .wrapper{}
+    &-articles {
+      padding: 60px 20px;
+    }
+    &-article{
+      @include flex($d:column, $w:nowrap, $j-c:flex-start, $a-i:flex-start);
+      &_cover {
+        width: 100%;
+        &-image {
+          width: 100%;
+        }
+      }
+      &_link {
+        cursor: pointer;
+      }
+      &_title {
+        @extend %fontmain-bold;
+        font-size: 2.4rem;
+        line-height: 2.4rem;
+        margin-bottom: 10px;
+      }
+      &_title-link {
+        text-decoration: none;
+      }
+      &_publishing-date {
+        @extend %fontmain;
+        font-size: 1.4rem;
+        color: $color-gray2;
+        margin-bottom: 20px;
+      }
+      &_text {
+        @extend %fontmain-light;
+        color: $color-black;
+        font-size: 1.6rem;
+        margin-bottom: 50px;
+      }
+      &_btn-more {
+        @extend %btn2;
+        &:hover {
+          border: 1px solid $color-gray2;
+        }
+      }
+    }
+    &-options {
+      @include flex($d:column, $w:nowrap, $j-c:flex-start, $a-i:stretch);
+      padding: 0 20px;
+    }
+    &-search {
+      margin-bottom: 20px;
+      &_title {
+        @extend %uppercase, %fontmain-bold;
+        font-size: 1.2rem;
+        letter-spacing: .2rem;
+      }
+      &_label {
+        position: relative;
+        display: block;
+        width: 90%;
+        top: 50px; left: 25px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid rgba(0,0,0,.1);
+        &:after {
+          content:'\f002';
+          position: absolute;
+          top: -5px; right: 0;
+          display: block;
+          font-size: 1.6rem;
+          font-family: 'fontAwesome';
+          color: $color-gray;
+        }
+      }
+      &_input {
+        padding: 20px;
+        @extend %w100;
+        height: 60px;
+        border: 1px solid rgba(0,0,0,.2);
+      }
+    }
+    &-categories {
+      padding: 20px;
+      border: 1px solid rgba(0,0,0,.2);
+      margin-bottom: 20px;
+      &_categories {
+        list-style-type: disc;
+        padding-left: 15px;
+      }
+      &_title {
+        @extend .blog-search_title;
+      }
+      &_categorie {
+        @extend .blog-search_title;
+        color: $color-gray2;
+        letter-spacing: .1rem;
+      }
+      &_link {}
+    }
+    &-recent {
+      padding: 20px;
+      border: 1px solid rgba(0,0,0,.2);
+      margin-bottom: 20px;
+      &_title {
+        @extend .blog-search_title;
+      }
+      &-article {
+        &_title {
+        }
+        &_publishing-date {}
+      }
+    }
+  }
+}

@@ -1,0 +1,262 @@
+.products-page {
+  overflow-x: hidden;
+  .featured-products {
+    padding: 0;
+    padding-top: 50px;
+  }
+  .product {
+    padding: 60px 0 60px;
+    @media screen and (min-width:$desktop){
+      @include flex($d:row, $w:nowrap, $j-c:space-around, $a-i:center);
+      margin: 0 auto;
+    }
+    &:first-of-type {
+      @media screen and (min-width:$desktop){
+        padding-top: 200px;
+        padding-bottom: 150px;
+        @include flex($d:row, $w:nowrap, $j-c:flex-start, $a-i:center);
+      }
+    }
+    &-picture {
+      @extend %w100;
+      &[alt="The free-standing towers"] {
+        width: auto;
+        height: 350px;
+        @media screen and (min-width:$desktop){
+          padding-left: 100px;
+          height: 650px;
+        }
+      }
+      &[alt="The Orison Panel"] {
+        @media screen and (min-width:$desktop){
+          order: 1;
+          position: absolute;
+          width: auto;
+          right: -20%;
+          height: 650px;
+        }
+      }
+    }
+    &-description {
+      &_name-product {
+        @media screen and (min-width:$desktop){
+          font-size: 4rem;
+        }
+      }
+      &_description {
+        @extend %fontmain-light;
+        @media screen and (min-width:$desktop){
+          font-size: 2.4rem;
+        }
+      }
+      @extend %text-center;
+      @media screen and (min-width:$desktop){
+        text-align: left;
+        padding-left: 30px;
+      }
+      &_btn {
+        &--reserve {
+          @extend %btn2;
+          margin-right: 10px;
+        }
+        &--details {
+          @extend %btn1;
+        }
+      }
+    }
+    &-share {
+      @extend %white;
+      padding: 30px;
+      &_text {
+        @extend %fontmain-bold;
+        font-size: 1.4rem;
+        letter-spacing: .2rem;
+        padding-right: 30px;
+      }
+      &_social {
+        font-size: 2.4rem;
+        color: $color-gray;
+        padding-right: 20px;
+        transition: all .3s ease-in-out;
+        &:hover {
+          color: $color-gray2;
+          text-decoration: none;
+        }
+      }
+    }
+    &--second {
+      background-color: $color-gray4;
+    }
+  }
+}
+
+.installation {
+  padding: 50px 10px;
+  .wrapper {}
+  &_title {
+    @extend %title-style1, %text-center;
+    margin-bottom: 20px;
+  }
+  &_subtitle {
+    @extend %title-style2, %text-center;
+    font-size: 2rem;
+    margin-bottom: 100px;
+    @media screen and (min-width:$desktop){
+      font-size: 2.8rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  }
+  &_arguments {
+    margin: 0 auto;
+    @include flex($d:row, $w:wrap, $j-c:space-between, $a-i:stretch);
+  }
+  &-argument {
+    @media screen and (min-width:$desktop){
+      width: calc(33% - 5px);
+    }
+    background-color: #F2F4F4;
+    padding: 50px;
+    margin-bottom: 15px;
+    @extend %w100;
+    @include flex($d:column, $w:nowrap, $j-c:flex-start, $a-i:center);
+    &_image {
+      height: 95px;
+      margin-bottom: 20px;
+      &--offset {
+        margin-left: 60px;
+      }
+    }
+    &_title {
+      @extend %fontmain-bold, %uppercase, %black;
+      font-size: 1.4rem;
+      letter-spacing: .2rem;
+      margin-bottom: 30px;
+    }
+    &_explanations {
+      @extend %fontmain-light, %text-center;
+      font-size: 1.6rem;
+      color: $color-gray5;
+    }
+  }
+}
+
+.forWho {
+  @include flex($d:row, $w:nowrap, $j-c:flex-start, $a-i:stretch);
+  @extend %text-center;
+  background-color: #F2F4F4;
+  &_illustration {
+    display: none;
+    @media screen and (min-width:$desktop){
+      display: block;
+      flex-basis: 50%;
+      background: url('../img/features.jpg') center;
+      background-size: cover;
+    }
+  }
+  &_arguments {
+    padding: 80px 20px;
+    @media screen and (min-width:$desktop){
+      flex-basis: 50%;
+      text-align: left;
+      margin-left: 15px;
+    }
+  }
+  &_title { @extend %title-style1; }
+  &_subtitle {
+    @extend %title-style2;
+    font-size: 3.6rem;
+  }
+  &_argument {
+    width: 70%;
+    margin: 0 auto;
+    @media screen and (min-width:$desktop){
+      margin-left: 0;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(0,0,0,.1);
+    }
+    &-title {
+      @extend %title-style1;
+      margin-bottom: 10px;
+    }
+    &-number {
+      display: block; height: 80px;
+      @extend %fontmain-light;
+      font-size: 7.2rem;
+      margin-bottom: 10px;
+    }
+    &-text {
+      @extend %fontmain-light;
+      font-size: 1.4rem;
+      color: $color-gray3;
+    }
+  }
+}
+
+.featured-technologies {
+  background-color: $color-gray3;
+  .technology {
+    @include flex($d:column, $w:nowrap, $j-c:flex-start, $a-i:center);
+    padding: 60px 20px;
+    @media screen and (min-width:$desktop){
+      flex-direction: row;
+    }
+    &-picture {
+      width: 100%;
+      @media screen and (min-width:$desktop){
+        width: 50%;
+      }
+      &--first {
+        order: 1;
+        padding-top: 50px;
+      }
+      &--second {
+        order: 0;
+      }
+    }
+    &-description {
+      @extend %white;
+      @media screen and (min-width:$desktop){
+        width: 50%;
+      }
+      &_title {
+        @extend %title-style1;
+        margin-bottom: 15px;
+      }
+      &_subtitle {
+        @extend %title-style2;
+        margin-bottom: 20px;
+        &--black {
+          @extend %black;
+        }
+      }
+      &_description {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        color: $color-gray;
+        margin-bottom: 25px;
+      }
+      &_btn {
+        @extend %fontmain-bold;
+        font-size: 1.4rem;
+        &::before {
+          content: '\f29c';
+          font-family: 'fontAwesome';
+          font-size: 2rem;
+          color: $color-gray5;
+          display: inline;
+          padding-right: 15px;
+        }
+      }
+      &_btn-more {
+        @extend %btn2;
+        &:hover {
+          border: 1px solid $color-gray2;
+        }
+      }
+    }
+    &--second {
+      background-color: $color-white;
+    }
+  }
+}
