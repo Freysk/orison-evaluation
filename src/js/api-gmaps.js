@@ -243,7 +243,7 @@ function initMap() {
 
 
   // Marker Customization
-  var iconBase = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png';
+  var iconBase = '../img/marker-orison.png';
   var marker = new google.maps.Marker({
     position: location,
     map: map,

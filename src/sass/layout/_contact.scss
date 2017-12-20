@@ -67,6 +67,32 @@
   &_title {
     @extend %title-style2, %text-center;
   }
+  &_gallery {
+    @extend .wrapper;
+    padding-top: 20px;
+    @include flex($d:row, $w:wrap, $j-c:center, $a-i:stretch);
+  }
+  &_link {
+    width: 20%;
+  }
+  &_image {
+  }
+  &_overlay {
+    background: rgba(0, 0, 0, 0.9);
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+    img {
+      @include posa($top:50%, $left:50%, $x:-50%, $y:-50%);
+      max-width: 90%;
+      max-height: 90%;
+    }
+  }
 }
 
 .findUs {
@@ -77,5 +103,13 @@
   &_gmap {
     height: 400px;
     width: 100%;
+  }
+}
+
+.owl-theme {
+  .element {
+    width: 95%;
+    height: 200px;
+    background-color: #222;
   }
 }

@@ -123,6 +123,9 @@
       }
       &_title {
         @extend .blog-search_title;
+        &::after {
+          @extend %after-highlight;
+        }
       }
       &_categorie {
         @extend .blog-search_title;
@@ -137,11 +140,22 @@
       margin-bottom: 20px;
       &_title {
         @extend .blog-search_title;
+        &::after {
+          @extend %after-highlight;
+        }
       }
       &-article {
         &_title {
+          @extend %fontmain-bold;
+          font-size: 1.6rem;
+          line-height: 1.8rem;
+          letter-spacing: .05rem;
+          margin: 0;
         }
-        &_publishing-date {}
+        &_publishing-date {
+          font-size: 1.2rem;
+          color: $color-gray;
+        }
       }
     }
   }

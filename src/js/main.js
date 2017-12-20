@@ -26,5 +26,6 @@ $(window).on({
     }
 });
 
-// de base, le plugin doit sélectionner les éléments de la page et les cacher
-// ensuite avec le mm sélecteur, détecher leur position top au scroll et les afficher par rapport à la position dans la fênetre
+$(document).ready(function(){
+  $(".owl-carousel").owlCarousel();
+});
